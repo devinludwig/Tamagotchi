@@ -22,4 +22,12 @@ class Tamagotchi
   def activity_level
     @activity_level
   end
+
+  def is_alive
+    if @food == 0
+      false
+    else
+      true
+    end
+  end
 end
