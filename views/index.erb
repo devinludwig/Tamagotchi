@@ -1,0 +1,20 @@
+<h1>Click to Care for Your Tamagotchi</h1>
+<h2><%= @name %></h2>
+
+<form action="feed">
+<button type="submit" name="feed">Feed</button>
+</form>
+
+<form action="play">
+  <button type="submit" name="play">Play</button>
+</form>
+
+<form action="sleep">
+  <button type="submit" name="sleep">Sleep</button>
+</form>
+
+<ul>
+ <li>Food: <%= @food %></li>
+ <li>Sleep: <%= @sleep %></li>
+ <li>Activity Level: <%= @activity %></li>
+</ul>
