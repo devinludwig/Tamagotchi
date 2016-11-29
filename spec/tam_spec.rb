@@ -31,7 +31,7 @@ describe(Tamagotchi) do
       my_pet = Tamagotchi.new('whatever')
       Tamagotchi.time_passes()
       my_pet.burn_calories()
-      expect(my_pet.food()).to(eq(9))
+      expect(my_pet.food()).to(eq(10))
     end
   end
 
@@ -40,7 +40,7 @@ describe(Tamagotchi) do
       my_pet = Tamagotchi.new('whatever')
       Tamagotchi.time_passes()
       my_pet.decrease_activity_level()
-      expect(my_pet.activity_level()).to(eq(9))
+      expect(my_pet.activity_level()).to(eq(10))
     end
   end
 
@@ -49,7 +49,7 @@ describe(Tamagotchi) do
       my_pet = Tamagotchi.new('whatever')
       Tamagotchi.time_passes()
       my_pet.decrease_sleep_level()
-      expect(my_pet.sleep_level()).to(eq(9))
+      expect(my_pet.sleep_level()).to(eq(10))
     end
   end
 
@@ -61,7 +61,7 @@ describe(Tamagotchi) do
       Tamagotchi.time_passes()
       my_pet.burn_calories()
       my_pet.feed()
-      expect(my_pet.food()).to(eq(10))
+      expect(my_pet.food()).to(eq(12))
     end
   end
 end

@@ -45,36 +45,36 @@ class Tamagotchi
   end
 
   def burn_calories
-    burned_calories = (@@elapsed_time / 10).ceil
+    burned_calories = (@@elapsed_time / 1).floor
     @food -= burned_calories
   end
 
   def decrease_activity_level
-    activity_decrease = (@@elapsed_time / 20).ceil
+    activity_decrease = (@@elapsed_time / 1).floor
     @activity_level -= activity_decrease
   end
 
   def decrease_sleep_level
-    sleep_decrease = (@@elapsed_time / 50).ceil
+    sleep_decrease = (@@elapsed_time / 1).floor
     @sleep -= sleep_decrease
   end
 
   def feed
-    if @food < 9
+    # if @food < 9
       @food += 2
-    end
+    # end
   end
 
   def nap
-    if @sleep < 9
+    # if @sleep < 9
       @sleep += 2
-    end
+    # end
   end
 
   def play
-    if @activity_level < 9
+    # if @activity_level < 9
       @activity_level += 2
-    end
+    # end
   end
 
 end
