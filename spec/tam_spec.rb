@@ -8,6 +8,7 @@ describe(Tamagotchi) do
       expect(my_pet.name()).to(eq('whatever'))
       expect(my_pet.food()).to(eq(10))
       expect(my_pet.sleep_level()).to(eq(10))
+      expect(my_pet.activity_level()).to(eq(10))
     end
   end
 end
