@@ -9,6 +9,7 @@ end
 
 get("/create") do
   @name = params.fetch('name')
+  $name = @name
   $tamagotchi = Tamagotchi.new(@name)
   @food = $tamagotchi.food()
   @sleep = $tamagotchi.sleep_level()
@@ -17,7 +18,7 @@ get("/create") do
 end
 
 get("/feed") do
-  @name = params.fetch('name')
+  @name = $tamagotchi.name()
   Tamagotchi.time_passes()
   $tamagotchi.feed()
   $tamagotchi.burn_calories()
@@ -30,7 +31,7 @@ get("/feed") do
 end
 
 get("/sleep") do
-  @name = params.fetch('name')
+  @name = $tamagotchi.name()
   Tamagotchi.time_passes()
   $tamagotchi.nap()
   $tamagotchi.burn_calories()
@@ -43,7 +44,7 @@ get("/sleep") do
 end
 
 get("/play") do
-  @name = params.fetch('name')
+  @name = $tamagotchi.name()
   Tamagotchi.time_passes()
   $tamagotchi.play()
   $tamagotchi.burn_calories()

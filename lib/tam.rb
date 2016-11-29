@@ -66,15 +66,15 @@ class Tamagotchi
   end
 
   def nap
-    # if @sleep < 9
+    if @sleep < 9
       @sleep += 2
-    # end
+    end
   end
 
   def play
-    # if @activity_level < 9
+    if @activity_level < 9
       @activity_level += 2
-    # end
+    end
   end
 
 end
